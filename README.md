@@ -14,10 +14,10 @@
 2.windows：需要安装WiX Toolset、Inno Setup、microsoft .net framework库
 
 #### 原应用截图
-<p><img alt="" src="" /></p>
+<p><img alt="" src="https://raw.githubusercontent.com/JazzHeric/RedisPlusForCluster/master/src/main/deploy/package/windows/original_desktop.jpeg" /></p>
 
 #### 初次改造后截图
 
-
+<p><img alt="" src="https://raw.githubusercontent.com/JazzHeric/RedisPlusForCluster/master/src/main/deploy/package/windows/new_desktop.png" /></p>
 
 
