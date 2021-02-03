@@ -1,0 +1,73 @@
+#main-view {
+    -fx-border-width: 1;
+    -fx-border-color: silver;
+    -fx-background-color: white;
+}
+
+#tops-view {
+    -fx-border-width: 0;
+}
+
+#tops-view-image {
+    -fx-background-repeat: no-repeat;
+    -fx-background-size: stretch stretch;
+    -fx-background-position: center center;
+    -fx-background-image: url('../image/tops-view-01.png');
+}
+
+#tops-view-items {
+    -fx-background-repeat: no-repeat;
+    -fx-background-size: stretch stretch;
+    -fx-background-position: center center;
+    -fx-background-image: url('../image/tops-view-02.png');
+}
+
+#tops-view-abate {
+    -fx-background-repeat: no-repeat;
+    -fx-background-size: stretch stretch;
+    -fx-background-position: center center;
+    -fx-background-image: url('../image/tops-view-03.png');
+}
+
+#tops-view-raise {
+    -fx-background-repeat: no-repeat;
+    -fx-background-size: stretch stretch;
+    -fx-background-position: center center;
+    -fx-background-image: url('../image/tops-view-04.png');
+}
+
+#tops-view-close {
+    -fx-background-repeat: no-repeat;
+    -fx-background-size: stretch stretch;
+    -fx-background-position: center center;
+    -fx-background-image: url('../image/tops-view-05.png');
+}
+
+#tops-view-items:hover,
+#tops-view-cover:hover,
+#tops-view-abate:hover,
+#tops-view-raise:hover,
+#tops-view-close:hover {
+    -fx-cursor: hand;
+    -fx-background-radius: 5px;
+    -fx-background-color: #ECE9EF;
+}
+
+#ends-view {
+    -fx-border-width: 0;
+    -fx-background-color: #CFE6F3;
+}
+
+#ends-view-image {
+    -fx-min-width: 16;
+    -fx-max-width: 16;
+    -fx-min-height: 16;
+    -fx-max-height: 16;
+    -fx-background-repeat: no-repeat;
+    -fx-background-size: stretch stretch;
+    -fx-background-position: center center;
+}
+
+#ends-view-order {
+    -fx-text-alignment: right;
+}

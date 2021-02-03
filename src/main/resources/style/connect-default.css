@@ -1,0 +1,109 @@
+.handle-left {
+    height: 100%;
+    float: left;
+    width: 240px;
+}
+
+.handle-left-main {
+    height: 360px;
+    float: left;
+    width: 240px;
+    border-right: 1px solid silver;
+}
+
+.handle-left-full {
+    top: 430px;
+    left: 0px;
+    width: 240px;
+    bottom: 0px;
+    position: absolute;
+    border-right: 1px solid silver;
+}
+
+.handle-left-item {
+    color: #2F4056;
+    height: 50px;
+    display: block;
+    line-height: 50px;
+    border-bottom: 1px solid silver;
+}
+
+.handle-left-item i {
+    margin-left: 20px;
+}
+
+.handle-left-item cite {
+    color: #0C0C0C;
+    margin-left: 5px;
+}
+
+.handle-left-item:hover {
+    cursor: pointer;
+    background-color: #EEEDEF;
+}
+
+.handle-left-item cite:hover {
+    cursor: pointer;
+}
+
+.handle-right {
+    height: 100%;
+    margin-left: 240px;
+}
+
+.layui-table-view {
+    margin: 0px;
+}
+
+.layui-table-tips-main {
+    display: none
+}
+
+.layui-table-tips-c {
+    display: none
+}
+
+.layui-table-click {
+    background-color: #CFE6F3;
+}
+
+.layui-table {
+    color: #0C0C0C;
+}
+
+.layui-table tbody tr:hover, .layui-table-hover {
+    color: dodgerblue;
+    background-color: #CFE6F3;
+}
+
+#layui-menu {
+    display: none;
+    text-align: left;
+    position: absolute;
+    background-color: #C0C0C0;
+}
+
+#layui-menu ul li {
+    width: 100px;
+    height: 35px;
+    margin: 1px 0;
+    display: block;
+    padding: 0 10px;
+    font-size: 13px;
+    cursor: pointer;
+    line-height: 35px;
+    text-align: center;
+    background-color: white;
+    list-style: none outside none;
+    border-left: 1px solid #C0C0C0;
+    border-right: 1px solid #C0C0C0;
+}
+
+#layui-menu ul li:hover {
+    color: dodgerblue;
+    background-color: #F2F2F2;
+}
+
+
+
+

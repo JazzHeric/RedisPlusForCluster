@@ -1,0 +1,96 @@
+/*定义滚动条样式*/
+::-webkit-scrollbar {
+    width: 5px;
+    height: 5px;
+    background-color: #26292C;
+}
+
+::-webkit-scrollbar-button {
+    width: 0;
+    height: 0;
+}
+
+::-webkit-scrollbar-button:start:decrement,
+::-webkit-scrollbar-button:end:increment {
+    display: block;
+}
+
+::-webkit-scrollbar-button:vertical:start:increment,
+::-webkit-scrollbar-button:vertical:end:decrement {
+    display: none;
+}
+
+::-webkit-scrollbar-corner {
+    display: block;
+}
+
+::-webkit-scrollbar-thumb {
+    background-clip: padding-box;
+    background-color: lightseagreen;
+    border-radius: 3px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background-clip: padding-box;
+    background-color: lightseagreen;
+    border-radius: 3px;
+}
+
+::-webkit-scrollbar-track:vertical,
+::-webkit-scrollbar-thumb:vertical {
+    border-left: 1px solid #26292C;
+    border-right: 1px solid #26292C;
+}
+
+::-webkit-scrollbar-track:horizontal,
+::-webkit-scrollbar-thumb:horizontal {
+    border-top: 1px solid #26292C;
+    border-bottom: 1px solid #26292C;
+}
+
+::-webkit-scrollbar-track:hover {
+    background-clip: padding-box;
+    background-color: #26292C;
+}
+
+body {
+    zoom: 1;
+    margin: 0;
+    padding: 0;
+    background-color: #26292C;
+}
+
+#panel-shell {
+    width: 100%;
+    opacity: 0.9;
+    height: 470px;
+    display: block;
+    color: #00fe00;
+    font-size: 15px;
+    overflow-y: auto;
+    background-color: #26292C;
+}
+
+.output-root {
+    color: #FF00FF;
+    font-size: 18px;
+}
+
+.output-view {
+    margin-top: -2px;
+    margin-left: 10px;
+    line-height: 25px;
+}
+
+.shell-view {
+    margin-left: 10px;
+}
+
+.blink {
+    color: #000;
+    background-color: #00fe00;
+}
+
+.output.error {
+    color: rgb(253, 161, 18);
+}

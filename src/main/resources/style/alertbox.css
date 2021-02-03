@@ -1,0 +1,29 @@
+#main-box {
+    -fx-border-width: 1;
+    -fx-border-color: #2DA1E2;
+    -fx-background-color: white;
+}
+
+#tops-box {
+    -fx-border-width: 0;
+    -fx-background-color: #D6D6D7;
+}
+
+#tops-box-image {
+    -fx-background-repeat: no-repeat;
+    -fx-background-size: stretch stretch;
+    -fx-background-position: center center;
+}
+
+#tops-box-close {
+    -fx-background-repeat: no-repeat;
+    -fx-background-size: stretch stretch;
+    -fx-background-position: center center;
+    -fx-background-image: url('../image/tops-view-05.png');
+}
+
+#tops-box-close:hover {
+    -fx-cursor: hand;
+    -fx-background-radius: 5px;
+    -fx-background-color: #ECE9EF;
+}

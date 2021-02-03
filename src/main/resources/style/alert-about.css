@@ -1,0 +1,31 @@
+.app-logo {
+    width: 95%;
+    margin-top: 20px;
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.app-logo img {
+    width: 50px;
+    height: 50px;
+}
+
+.app-text {
+    width: 95%;
+    height: 120px;
+    margin: 0 auto;
+    line-height: 30px;
+    background: #eaeaea;
+}
+
+#app-info {
+    width: 95%;
+    margin: 0 auto;
+}
+
+.layui-table tbody tr:hover, .layui-table-hover {
+    background-color: #FFFFFF;
+}
+
+
+

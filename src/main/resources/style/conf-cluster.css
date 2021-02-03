@@ -1,0 +1,79 @@
+.handle-left {
+    top: 70px;
+    left: 0px;
+    float: left;
+    bottom: 0px;
+    right: 500px;
+    position: absolute;
+    border-right: 1px solid #E6E6E6;
+}
+
+#tops-div {
+    top: 0px;
+    left: 0px;
+    right: 500px;
+    z-index: 999;
+    position: absolute;
+}
+
+#data-div {
+    top: 40px;
+    left: 0px;
+    float: left;
+    bottom: 0px;
+    width: 100%;
+    right: 500px;
+    position: absolute;
+    overflow-y: scroll;
+}
+
+.handle-right {
+    top: 70px;
+    right: 0px;
+    float: left;
+    bottom: 0px;
+    width: 500px;
+    position: absolute;
+}
+
+.conf-tops-div {
+    color: #212121;
+    height: 39px;
+    text-align: center;
+    font-size: 14px;
+    line-height: 40px;
+    background-color: #F2F2F2;
+    border-bottom: 1px solid #E6E6E6;
+}
+
+.data-form-div {
+    top: 40px;
+    right: 0px;
+    width: 500px;
+    float: left;
+    bottom: 20px;
+    position: absolute;
+    overflow-y: scroll;
+}
+
+.layui-table {
+    color: #0C0C0C;
+    margin-top: 0px;
+}
+
+.layui-form-div {
+    margin-top: 20px;
+}
+
+.layui-form-pane {
+    width: 90%;
+    margin: 0 auto;
+}
+
+.layui-form-pane .layui-input-block {
+    margin-left: 230px;
+}
+
+.layui-form-pane .layui-form-label {
+    width: 230px;
+}

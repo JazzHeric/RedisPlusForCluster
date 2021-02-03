@@ -1,0 +1,43 @@
+#zset-data {
+    display: none;
+}
+
+#hash-data {
+    display: none;
+}
+
+#data-btns {
+    width: 100%;
+    bottom: 15px;
+    position: fixed;
+    text-align: center;
+}
+
+.layui-form-select dl {
+    top: 40px;
+    padding: 0;
+}
+
+.layui-anim-upbit {
+    -webkit-animation-name: none;
+    animation-name: none;
+}
+
+.layui-form-item .layui-textarea {
+    width: 100%;
+    min-height: 100px;
+    display: block;
+    padding-left: 10px;
+}
+
+.layui-form-item .layui-input-inline {
+    float: left;
+    width: 304px;
+    margin-right: 10px;
+}
+
+.layui-input, .layui-select, .layui-textarea {
+    border: 1px solid grey;
+}
+
+

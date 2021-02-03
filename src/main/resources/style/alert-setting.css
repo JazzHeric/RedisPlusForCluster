@@ -1,0 +1,24 @@
+.layui-form {
+    width: 90%;
+    margin: 0 auto;
+}
+
+.layui-btn-reset {
+    width: 70px;
+    height: 25px;
+    padding: 5px;
+    cursor: pointer;
+    margin-top: -5px;
+    line-height: 25px;
+    text-align: center;
+    border-radius: 2px;
+    transition: all .3s;
+    display: inline-block;
+    border: 1px solid #e6e6e6;
+    -webkit-transition: all .3s;
+}
+
+.layui-btn-reset:hover {
+    border: 1px solid #93D1FF;
+    background-color: #93D1FF;
+}

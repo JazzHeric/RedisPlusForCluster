@@ -1,0 +1,277 @@
+.handle-left {
+    height: 100%;
+    float: left;
+    width: 400px;
+    overflow: hidden;
+    border-right: 1px solid silver;
+}
+
+.handle-left-main {
+    height: 50px;
+    float: left;
+    width: 400px;
+    border-right: 1px solid silver;
+    border-bottom: 1px solid silver;
+}
+
+.handle-left-full {
+    top: 120px;
+    left: 0px;
+    float: left;
+    width: 400px;
+    bottom: 0px;
+    overflow: auto;
+    position: absolute;
+    border-right: 1px solid silver;
+}
+
+.key-like {
+    width: 99.8%;
+    height: 50px;
+    line-height: 50px;
+    padding-left: 8px;
+    margin-right: 17px;
+    border: #eaeaea 1px solid;
+}
+
+.query-like-input {
+    float: left;
+    margin-top: 11px;
+    border-radius: 3px;
+    padding-left: 10px;
+    width: 303px !important;
+    height: 28px !important;
+    border: 1px solid silver;
+}
+
+.query-like-button {
+    width: 67px !important;
+    margin-left: 1px !important;
+}
+
+.handle-right {
+    height: 100%;
+    margin-left: 400px;
+}
+
+.handle-right-main {
+    height: 190px;
+    width: 100%;
+}
+
+.handle-right-full {
+    top: 260px;
+    left: 400px;
+    right: 0px;
+    bottom: 0px;
+    overflow-y: auto;
+    position: absolute;
+}
+
+.key-deal {
+    width: 100%;
+    height: 30px;
+    line-height: 30px;
+    margin: 0 auto;
+    padding: 10px;
+    border-bottom: silver 1px solid;
+}
+
+.key-info {
+    margin: 0 auto;
+    padding: 10px 9px 10px 9px;
+}
+
+.key-view {
+    margin: 0 auto;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+.key-tool-view {
+    height: 40px;
+    line-height: 35px;
+    text-align: center;
+    background-color: #CFE6F3;
+}
+
+.key-tool-abtn {
+    height: 40px;
+    color: springgreen;
+    background-color: #638CB7;
+}
+
+.key-tool-dbtn {
+    height: 40px;
+    background-color: #4777A7;
+}
+
+.key-vals-view {
+    top: 10px;
+    left: 10px;
+    right: 10px;
+    bottom: 10px;
+    padding: 10px;
+    position: absolute;
+    border: 1px solid #E2E2E3;
+    background-color: #F2F2F2;
+}
+
+.key-vals-show {
+    top: 5px;
+    left: 5px;
+    border: 0;
+    right: 5px;
+    bottom: 5px;
+    height: auto;
+    display: block;
+    overflow-y: auto;
+    line-height: 25px;
+    position: absolute;
+    word-wrap: break-word;
+    background-color: #F2F2F2;
+}
+
+.key-vals-hide {
+    border: 0;
+    display: none;
+}
+
+.key-vals-text {
+    top: 0px;
+    left: 0px;
+    right: 0px;
+    bottom: 35px;
+    overflow-y: auto;
+    position: absolute;
+    resize: none !important;
+}
+
+.key-vals-btns {
+    right: 0px;
+    bottom: 0px;
+    position: absolute;
+}
+
+.copy-input-box {
+    top: 0;
+    border: 0;
+    left: 15px;
+    right: 10px;
+    height: 40px;
+    position: absolute;
+}
+
+.data-table-box {
+    height: auto;
+    margin-top: 5px;
+    overflow-y: auto;
+}
+
+.layui-table {
+    width: 99.8%;
+    color: #0C0C0C;
+    margin: 0 auto;
+}
+
+.layui-table tbody tr:hover, .layui-table-hover {
+    background-color: #FFFFFF;
+}
+
+.layui-layer-lan {
+    width: 280px;
+}
+
+.layui-layer-dialog .layui-layer-content {
+    padding: 20px;
+    font-size: 14px;
+    overflow-y: auto;
+    line-height: 24px;
+    position: relative;
+    overflow-x: hidden;
+    word-break: break-all;
+}
+
+.layui-layer-content .layui-layer-input {
+    display: block;
+    width: 230px;
+    height: 36px;
+    margin-left: 20px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    line-height: 30px;
+    padding-left: 10px;
+    border: 1px solid #e6e6e6;
+    color: #333;
+}
+
+.ztree li span.button.firstPage {
+    float: right;
+    margin-left: 2px;
+    margin-right: 0;
+    background-position: -144px -16px;
+    vertical-align: top;
+    *vertical-align: middle
+}
+
+.ztree li span.button.prevPage {
+    float: right;
+    margin-left: 2px;
+    margin-right: 0;
+    background-position: -144px -48px;
+    vertical-align: top;
+    *vertical-align: middle
+}
+
+.ztree li span.button.nextPage {
+    float: right;
+    margin-left: 2px;
+    margin-right: 0;
+    background-position: -144px -64px;
+    vertical-align: top;
+    *vertical-align: middle
+}
+
+.ztree li span.button.lastPage {
+    float: right;
+    margin-left: 2px;
+    margin-right: 0;
+    background-position: -144px -32px;
+    vertical-align: top;
+    *vertical-align: middle
+}
+
+.ztree .level1 {
+    margin-top: 5px !important;
+}
+
+.ztree li a:hover {
+    color: #009E94;
+}
+
+#ztree-menu {
+    text-align: left;
+    position: absolute;
+    visibility: hidden;
+    background-color: #4777A7;
+}
+
+#ztree-menu ul li {
+    width: 60px;
+    height: 25px;
+    margin: 1px 0;
+    display: block;
+    padding: 0 10px;
+    font-size: 11px;
+    cursor: pointer;
+    line-height: 25px;
+    text-align: center;
+    background-color: white;
+    list-style: none outside none;
+    border-left: 1px solid #4777A7;
+    border-right: 1px solid #4777A7;
+}
+
+#ztree-menu ul li:hover {
+    background-color: #93D1FF;
+}

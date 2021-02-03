@@ -1,0 +1,64 @@
+.handle-root {
+    left: 0;
+    right: 0;
+    top: 70px;
+    bottom: 0;
+    overflow: hidden;
+    position: absolute;
+}
+
+.handle-left {
+    height: 100%;
+    float: left;
+    width: 50%;
+    overflow: hidden;
+    border-right: 1px solid silver;
+}
+
+.handle-left-main {
+    top: 0;
+    float: left;
+    width: 50%;
+    height: 50%;
+    bottom: 50%;
+    /*height: 300px;*/
+    overflow-y: auto;
+    position: absolute;
+    border-right: 1px solid silver;
+
+}
+
+.handle-left-full {
+    left: 0px;
+    /*top: 370px;*/
+    top: 50%;
+    width: 50%;
+    float: left;
+    bottom: 0px;
+    overflow-y: auto;
+    padding-top: 1px;
+    position: absolute;
+    border-top: 1px solid silver;
+    border-right: 1px solid silver;
+}
+
+.layui-table {
+    color: #0C0C0C;
+    margin: 0px auto;
+}
+
+.handle-right {
+    height: 100%;
+    margin-left: 50%;
+}
+
+.layui-collapse {
+    margin: 0px auto;
+}
+
+.layui-colla-content {
+    color: steelblue;
+    line-height: 30px;
+    margin-left: 20px;
+    border: 0px;
+}

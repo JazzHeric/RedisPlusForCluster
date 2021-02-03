@@ -1,0 +1,219 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+    <groupId>com.maxbill</groupId>
+    <artifactId>RedisPlus</artifactId>
+    <version>0.0.1-SNAPSHOT</version>
+    <packaging>jar</packaging>
+    <name>RedisPlus</name>
+    <description>RedisPlus project for Spring Boot</description>
+
+    <!--开发者信息-->
+    <developers>
+        <developer>
+            <name>MaxBill</name>
+            <email>maxbill1993@163.com</email>
+            <url>https://my.oschina.net/zss1993</url>
+        </developer>
+    </developers>
+
+    <!--开源协议-->
+    <licenses>
+        <license>
+            <name>GNU GENERAL PUBLIC LICENSE Version 3, 29 June 2007</name>
+            <url>http://www.gnu.org/licenses/gpl-3.0.html</url>
+        </license>
+    </licenses>
+
+    <parent>
+        <groupId>org.springframework.boot</groupId>
+        <artifactId>spring-boot-starter-parent</artifactId>
+        <version>2.0.6.RELEASE</version>
+        <relativePath/>
+    </parent>
+
+    <properties>
+        <java.version>1.8</java.version>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
+    </properties>
+
+    <dependencies>
+
+        <!--controls依赖-->
+        <dependency>
+            <groupId>org.openjfx</groupId>
+            <artifactId>javafx-controls</artifactId>
+            <version>11</version>
+        </dependency>
+
+        <!--graphics依赖-->
+        <dependency>
+            <groupId>org.openjfx</groupId>
+            <artifactId>javafx-graphics</artifactId>
+            <version>11</version>
+        </dependency>
+
+        <!--base依赖-->
+        <dependency>
+            <groupId>org.openjfx</groupId>
+            <artifactId>javafx-base</artifactId>
+            <version>11</version>
+        </dependency>
+
+        <!--jfxweb依赖-->
+        <dependency>
+            <groupId>org.openjfx</groupId>
+            <artifactId>javafx-web</artifactId>
+            <version>11</version>
+        </dependency>
+
+        <!--boot依赖-->
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter</artifactId>
+        </dependency>
+
+        <!--mybatis依赖-->
+        <dependency>
+            <groupId>org.mybatis.spring.boot</groupId>
+            <artifactId>mybatis-spring-boot-starter</artifactId>
+            <version>1.3.0</version>
+        </dependency>
+
+        <!--邮件依赖 -->
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-mail</artifactId>
+        </dependency>
+
+        <!--lombok插件-->
+        <dependency>
+            <groupId>org.projectlombok</groupId>
+            <artifactId>lombok</artifactId>
+            <optional>true</optional>
+        </dependency>
+
+        <!--fastjson依赖-->
+        <dependency>
+            <groupId>com.alibaba</groupId>
+            <artifactId>fastjson</artifactId>
+            <version>1.2.15</version>
+        </dependency>
+
+        <!--derby内嵌数据库依赖-->
+        <dependency>
+            <groupId>org.apache.derby</groupId>
+            <artifactId>derby</artifactId>
+            <version>10.13.1.1</version>
+        </dependency>
+
+        <!--druid数据源依赖-->
+        <dependency>
+            <groupId>com.alibaba</groupId>
+            <artifactId>druid</artifactId>
+            <version>1.0.31</version>
+        </dependency>
+
+        <!--Redis依赖-->
+        <dependency>
+            <groupId>redis.clients</groupId>
+            <artifactId>jedis</artifactId>
+            <version>3.0.0</version>
+        </dependency>
+
+        <!--jsch依赖-->
+        <dependency>
+            <groupId>com.jcraft</groupId>
+            <artifactId>jsch</artifactId>
+            <version>0.1.54</version>
+        </dependency>
+
+        <!--net依赖-->
+        <dependency>
+            <groupId>commons-net</groupId>
+            <artifactId>commons-net</artifactId>
+            <version>3.6</version>
+        </dependency>
+
+        <!-- google guava -->
+        <dependency>
+            <groupId>com.google.guava</groupId>
+            <artifactId>guava</artifactId>
+            <version>13.0.1</version>
+        </dependency>
+
+    </dependencies>
+
+
+    <build>
+        <plugins>
+
+            <!--javafx application package-->
+            <plugin>
+                <groupId>com.zenjava</groupId>
+                <artifactId>javafx-maven-plugin</artifactId>
+                <version>8.8.3</version>
+                <configuration>
+                    <!--启动类-->
+                    <mainClass>com.maxbill.MainApplication</mainClass>
+                    <!--启动引导-->
+                    <!--<preLoader>com.maxbill.core.desktop.AppGuide</preLoader>-->
+                    <!--运行文件名-->
+                    <appName>RedisPlus</appName>
+                    <!--启用自定义打包配置-->
+                    <verbose>true</verbose>
+                    <!--菜单图标-->
+                    <needMenu>true</needMenu>
+                    <!--桌面图标-->
+                    <needShortcut>true</needShortcut>
+                    <!--JVM参数-->
+                    <jvmArgs>
+                        <jvmArg>-Xms100m</jvmArg>
+                        <jvmArg>-Xmx200m</jvmArg>
+                        <jvmArg>-Dfile.encoding=UTF-8</jvmArg>
+                        <jvmArg>-XX:-UseGCOverheadLimit</jvmArg>
+                        <jvmArg>-Dsun.jnu.encoding=UTF-8</jvmArg>
+                        <jvmArg>-Dvisualvm.display.name=RedisPlus</jvmArg>
+                        <argument>-Dapple.laf.useScreenMenuBar=true</argument>
+                    </jvmArgs>
+                    <!--JVM启动参数-->
+                    <launcherArguments>
+                        <launcherArgument>-Xms100m</launcherArgument>
+                        <launcherArgument>-Xmx200m</launcherArgument>
+                        <launcherArgument>-Dfile.encoding=UTF-8</launcherArgument>
+                        <launcherArgument>-XX:-UseGCOverheadLimit</launcherArgument>
+                        <launcherArgument>-Dsun.jnu.encoding=UTF-8</launcherArgument>
+                        <launcherArgument>-Dvisualvm.display.name=RedisPlus</launcherArgument>
+                    </launcherArguments>
+                    <!--JAVA启动参数-->
+                    <runJavaParameter>
+                        -Xms100m
+                        <!-- -Xms50m -Xmn1g -Xss228k -XX:+UseParallelGC -XX:ParallelGCThreads=20-->
+                    </runJavaParameter>
+                    <!--APP启动参数-->
+                    <runAppParameter>
+                        --spring.profiles.active=pro
+                    </runAppParameter>
+                    <!--安装配置项-->
+                    <bundleArguments>
+                        <installdirChooser>true</installdirChooser>
+                    </bundleArguments>
+                    <!--供应商-->
+                    <vendor>MaxBill</vendor>
+                    <!--允许所有权限-->
+                    <allPermissions>true</allPermissions>
+                    <!--版本信息-->
+                    <nativeReleaseVersion>v3.2.0</nativeReleaseVersion>
+                    <!--说明信息-->
+                    <description>
+                        RedisPlus是为Redis可视化管理开发的一款开源免费的桌面客户端软件
+                    </description>
+                </configuration>
+            </plugin>
+
+        </plugins>
+    </build>
+
+</project>

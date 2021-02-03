@@ -1,0 +1,52 @@
+.handle-root {
+    left: 0;
+    right: 0;
+    top: 70px;
+    bottom: 0;
+    overflow: hidden;
+    position: absolute;
+}
+
+.handle-tops {
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 50%;
+    bottom: 50%;
+    width: 100%;
+    position: absolute;
+    background-color: #93D1FF;
+}
+
+.handle-ends {
+    top: 50%;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: 100%;
+    height: 50%;
+    position: absolute;
+    background-color: #93D1FF;
+}
+
+.container1 {
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 50%;
+    float: left;
+    padding: 1px;
+    margin: 0 auto;
+    position: absolute;
+}
+
+.container2 {
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 50%;
+    padding: 1px;
+    float: right;
+    margin: 0 auto;
+    position: absolute;
+}

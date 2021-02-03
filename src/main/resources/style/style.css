@@ -1,0 +1,160 @@
+/*使用自定义字体*/
+@font-face {
+    font-family: 'redisplus';
+    src: url('../font/redisplus.ttf') format('truetype');
+}
+
+/*定义滚动条样式*/
+::-webkit-scrollbar {
+    width: 5px;
+    height: 5px;
+    background-color: transparent;
+}
+
+::-webkit-scrollbar-button {
+    width: 0;
+    height: 0;
+}
+
+::-webkit-scrollbar-button:start:decrement, ::-webkit-scrollbar-button:end:increment {
+    display: block;
+}
+
+::-webkit-scrollbar-button:vertical:start:increment, ::-webkit-scrollbar-button:vertical:end:decrement {
+    display: none;
+}
+
+::-webkit-scrollbar-corner {
+    display: block;
+}
+
+::-webkit-scrollbar-thumb {
+    background-clip: padding-box;
+    background-color: rgba(0, 0, 0, .2);
+    border-radius: 3px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background-clip: padding-box;
+    background-color: rgba(0, 0, 0, .5);
+    border-radius: 3px;
+}
+
+::-webkit-scrollbar-track:vertical, ::-webkit-scrollbar-thumb:vertical {
+    border-left: 1px solid transparent;
+    border-right: 1px solid transparent;
+}
+
+::-webkit-scrollbar-track:horizontal, ::-webkit-scrollbar-thumb:horizontal {
+    border-top: 1px solid transparent;
+    border-bottom: 1px solid transparent;
+}
+
+::-webkit-scrollbar-track:hover {
+    background-clip: padding-box;
+    background-color: rgba(0, 0, 0, .15);
+}
+
+/*业务样式*/
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'redisplus';
+}
+
+.root {
+    height: 100%;
+    width: 100%;
+    overflow: hidden;
+}
+
+.topbar {
+    top: 0;
+    left: 0;
+    height: 70px;
+    width: 100%;
+    z-index: 1000;
+    color: #0C0C0C;
+    position: fixed;
+    background-color: #CFE6F3;
+}
+
+.topbar-menu {
+    width: 75%;
+    float: left;
+}
+
+.topbar-menu-item {
+    width: 60px;
+    height: 60px;
+    float: left;
+    display: block;
+    margin-top: 5px;
+    margin-left: 10px;
+    border: 1px solid #CFE6F3;
+}
+
+.topbar-menu-item img {
+    width: 38px;
+    height: 38px;
+    display: block;
+    margin-top: 2px;
+    margin-left: 11px;
+}
+
+.topbar-menu-item span {
+    height: 20px;
+    color: #0C0C0C;
+    display: block;
+    font-size: 12px;
+    line-height: 22px;
+    text-align: center;
+}
+
+.topbar-menu-item:hover {
+    cursor: pointer;
+    border-radius: 10px;
+    border: 1px solid #1E9FFF;
+}
+
+.curr {
+    border-radius: 10px;
+    background-color: #93D1FF;
+}
+
+.topbar-logo {
+    width: 24%;
+    float: right;
+    text-align: right;
+}
+
+.topbar-logo img {
+    width: 120px;
+    height: 40px;
+    margin-top: 15px;
+    margin-right: 10px;
+    display: inline-block;
+}
+
+.handle {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    margin-top: 70px;
+}
+
+/*---------------------------*/
+
+.set-color {
+    color: white !important;
+    background-color: #4476A7 !important;
+}
+
+.div-input {
+    border: 1px solid silver;
+}
+
+.layui-layer-lan .layui-layer-btn a {
+    color: white !important;
+    background: #4476A7 !important;
+}

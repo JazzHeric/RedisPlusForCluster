@@ -1,0 +1,79 @@
+#log-main-box {
+    -fx-border-width: 1;
+    -fx-border-color: #2DA1E2;
+    -fx-background-color: white;
+}
+
+#log-tops-box {
+    -fx-border-width: 0;
+    -fx-background-color: #D6D6D7;
+}
+
+#log-tops-box-image {
+    -fx-background-repeat: no-repeat;
+    -fx-background-size: stretch stretch;
+    -fx-background-position: center center;
+}
+
+#log-body-box {
+    -fx-padding: 0;
+    -fx-background-insets: 0;
+    -fx-background-color: transparent;
+}
+
+
+/* 滚动条样式 ================================================ */
+.scroll-bar:horizontal {
+    -fx-background-color: transparent;
+    -fx-border-width: 0;
+}
+
+.scroll-bar:vertical {
+    -fx-background-color: transparent;
+    -fx-border-width: 0;
+}
+
+.scroll-bar:horizontal .track, .scroll-bar:vertical .track {
+    -fx-background-color: transparent;
+    -fx-border-color: transparent;
+}
+
+.scroll-bar:horizontal .increment-button, .scroll-bar:horizontal .decrement-button {
+    -fx-background-color: transparent;
+    -fx-padding: 0 0 10 0;
+}
+
+.scroll-bar:vertical .increment-button, .scroll-bar:vertical .decrement-button {
+    -fx-background-color: transparent;
+    -fx-padding: 0 10 0 0;
+}
+
+.scroll-bar .increment-arrow, .scroll-bar .decrement-arrow {
+    -fx-shape: "";
+    -fx-padding: 0;
+}
+
+.scroll-bar:horizontal .thumb, .scroll-bar:vertical .thumb {
+    -fx-background-color: rgb(0, 0, 0);
+    -fx-background-radius: 8em;
+    -fx-border-radius: 8em;
+    -fx-pref-height: 10px;
+}
+
+.scroll-pane .viewport {
+    -fx-background-color: transparent;
+}
+
+.scroll-pane {
+    -fx-background-color: transparent;
+}
+
+.scroll-pane .content {
+    -fx-padding: 10px;
+    -fx-alignment: center;
+    -fx-background-color: transparent;
+}
+
+.scroll-pane .corner {
+    -fx-background-color: transparent;
+}

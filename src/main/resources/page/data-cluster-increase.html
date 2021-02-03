@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/html">
+<head>
+    <meta charset="utf-8">
+    <meta name="renderer" content="webkit">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <link rel="stylesheet" type="text/css" href="../plugin/layui/css/layui.css"/>
+    <link rel="stylesheet" type="text/css" href="../style/style.css"/>
+    <link rel="stylesheet" type="text/css" href="../style/data-cluster-increase.css"/>
+</head>
+<body>
+</br>
+<form class="layui-form" lay-filter="dataForm">
+    <div class="layui-form-item">
+        <label class="layui-form-label">数据键名</label>
+        <div class="layui-input-inline">
+            <input type="text" id="keys" lay-verify="required" autocomplete="off" class="layui-input"
+                   placeholder="key">
+        </div>
+    </div>
+    <div class="layui-form-item">
+        <label class="layui-form-label">数据时效</label>
+        <div class="layui-input-inline">
+            <input type="text" id="time" lay-verify="required" value="-1" autocomplete="off" class="layui-input"
+                   placeholder="ttl">
+        </div>
+    </div>
+    <div class="layui-form-item">
+        <label class="layui-form-label">数据类型</label>
+        <div class="layui-input-inline">
+            <select id="type" lay-filter="type">
+                <option value="1">set</option>
+                <option value="2">zset</option>
+                <option value="3">list</option>
+                <option value="4">hash</option>
+                <option value="5" selected>string</option>
+            </select>
+        </div>
+    </div>
+    <div class="layui-form-item" id="zset-data">
+        <label class="layui-form-label">数据分数</label>
+        <div class="layui-input-inline">
+            <input type="text" id="zsco" autocomplete="off" class="layui-input"
+                   placeholder="score">
+        </div>
+    </div>
+    <div class="layui-form-item" id="hash-data">
+        <div class="layui-inline">
+            <label class="layui-form-label">数据键值</label>
+            <div class="layui-input-inline" style="width: 100px;">
+                <input type="text" id="mkey" autocomplete="off" class="layui-input">
+            </div>
+            <div class="layui-form-mid">:</div>
+            <div class="layui-input-inline" style="width: 180px;">
+                <input type="text" id="mval" autocomplete="off" class="layui-input">
+            </div>
+        </div>
+    </div>
+    <div class="layui-form-item" id="else-data">
+        <label class="layui-form-label">数据键值</label>
+        <div class="layui-input-inline">
+            <textarea id="vals" lay-verify="required" class="layui-textarea"></textarea>
+        </div>
+    </div>
+    <div class="layui-form-item" id="data-btns">
+        <input type="button" value="添加" class="layui-btn layui-btn-sm" lay-filter="submitBtn" lay-submit
+               style="background: #4476A7"/>
+        <input type="button" value="取消" id="gobackBtn" class="layui-btn layui-btn-sm" style="background: #4476A7"/>
+    </div>
+</form>
+
+<script type="text/javascript" src="../plugin/layui/layui.js"></script>
+<script type="text/javascript" src="../script/nocopy.js"></script>
+<script type="text/javascript" src="../script/data-cluster-increase.js"></script>
+</body>
+</html>

@@ -1,0 +1,60 @@
+.layui-table {
+    color: #0C0C0C;
+}
+
+.layui-table-tool {
+    background: white;
+}
+
+.layui-table-view {
+    margin: 0;
+}
+
+.layui-table-tips-main {
+    display: none
+}
+
+.layui-table-tips-c {
+    display: none
+}
+
+.layui-table-click {
+    background-color: #CFE6F3;
+}
+
+.layui-table tbody tr:hover, .layui-table-hover {
+    color: dodgerblue;
+    background-color: #CFE6F3;
+}
+
+#layui-menu {
+    display: none;
+    text-align: left;
+    position: absolute;
+    background-color: #C0C0C0;
+}
+
+#layui-menu ul li {
+    width: 100px;
+    height: 35px;
+    margin: 1px 0;
+    display: block;
+    padding: 0 10px;
+    font-size: 13px;
+    cursor: pointer;
+    line-height: 35px;
+    text-align: center;
+    background-color: white;
+    list-style: none outside none;
+    border-left: 1px solid #C0C0C0;
+    border-right: 1px solid #C0C0C0;
+}
+
+#layui-menu ul li:hover {
+    color: dodgerblue;
+    background-color: #F2F2F2;
+}
+
+
+
+

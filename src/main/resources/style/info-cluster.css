@@ -1,0 +1,36 @@
+.handle-left {
+    left: 0;
+    top: 70px;
+    bottom: 0;
+    width: 50%;
+    float: left;
+    overflow: auto;
+    position: absolute;
+    border-right: 1px solid silver;
+}
+
+.layui-table {
+    color: #0C0C0C;
+    margin: 0px auto;
+}
+
+.handle-right {
+    right: 0;
+    top: 70px;
+    bottom: 0;
+    width: 50%;
+    float: right;
+    overflow: auto;
+    position: absolute;
+}
+
+.layui-collapse {
+    margin-left: 1px;
+}
+
+.layui-colla-content {
+    color: steelblue;
+    line-height: 30px;
+    margin-left: 20px;
+    border: 0px;
+}

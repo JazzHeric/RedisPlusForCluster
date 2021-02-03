@@ -1,0 +1,87 @@
+.save-root {
+    width: 455px;
+    height: auto;
+}
+
+.save-main {
+    width: 100%;
+    height: auto;
+    margin-top: 20px;
+}
+
+.save-show {
+    width: 100%;
+}
+
+.save-hide {
+    width: 100%;
+}
+
+.save-btns {
+    width: 100%;
+    height: auto;
+    margin-top: 20px;
+    text-align: center;
+}
+
+.layui-input {
+    height: 25px;
+}
+
+.layui-form-item {
+    width: 455px !important;
+    margin-bottom: 20px;
+}
+
+.layui-form-label {
+    height: 27px;
+    line-height: 27px;
+    padding: 0px 15px;
+}
+
+.layui-form-mid {
+    padding: 0px !important;
+    height: 27px;
+    line-height: 27px;
+}
+
+.div-input01 {
+    width: 300px !important;
+    border: 1px solid grey;
+}
+
+.div-input02 {
+    width: 180px !important;
+    border: 1px solid grey;
+}
+
+.div-input03 {
+    width: 94px !important;
+    border: 1px solid grey;
+}
+
+.div-input04 {
+    width: 118px !important;
+    border: 1px solid transparent;
+}
+
+.div-input05 {
+    width: 110px !important;
+    border: 1px solid transparent;
+}
+
+.layui-form-checkbox[lay-skin="primary"] {
+    margin-top: 4px !important;
+}
+
+.layui-form-checkbox[lay-skin="primary"] i {
+    background: #E3DFDD;
+}
+
+.layui-input::-webkit-input-placeholder {
+    color: #aab2bd;
+}
+
+.layui-form-danger .layui-form-select .layui-input, .layui-form-danger:focus {
+    border-color: transparent !important;
+}

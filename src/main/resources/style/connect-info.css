@@ -1,0 +1,56 @@
+.node-root {
+    width: 455px;
+    height: auto;
+}
+
+.node-main {
+    width: 100%;
+    height: auto;
+    margin-top: 20px;
+}
+
+.node-show {
+    width: 100%;
+}
+
+.node-hide {
+    width: 100%;
+    display: none;
+}
+
+.node-btns {
+    width: 100%;
+    height: auto;
+    margin-top: 20px;
+    text-align: center;
+}
+
+.layui-input {
+    height: 25px;
+}
+
+.layui-form-item {
+    width: 455px !important;
+    margin-bottom: 20px;
+}
+
+.layui-form-label {
+    height: 27px;
+    line-height: 27px;
+    font-weight: bold;
+    padding: 0px 15px;
+}
+
+.div-input {
+    height: 27px;
+    line-height: 27px;
+    width: 300px !important;
+    border: 0px solid grey;
+}
+
+.layui-table tbody tr:hover, .layui-table-hover {
+    background-color: #FFFFFF;
+}
+
+
+

@@ -1,0 +1,39 @@
+.advice-box {
+    height: 100%;
+    width: 95%;
+    margin: 0 auto;
+}
+
+.padding-top-div {
+    padding-top: 20px;
+}
+
+.layui-form-div {
+    margin-top: 20px;
+}
+
+.layui-form-pane {
+    width: 90%;
+    margin: 0 auto;
+}
+
+.layui-textarea {
+    resize: none;
+    padding: 7px 15px;
+    height: 160px;
+}
+
+.layui-card-body {
+    color: #af4040;
+    line-height: 25px;
+    border-top: 1px solid #D0D0D0;
+}
+
+.layui-form-pane .layui-form-label {
+    width: 90px;
+}
+
+.layui-form-pane .layui-input-block {
+    margin-left: 90px;
+}
+

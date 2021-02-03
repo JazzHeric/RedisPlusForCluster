@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="renderer" content="webkit">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <link rel="stylesheet" href="../plugin/layui/css/layui.css"/>
+    <link rel="stylesheet" href="../style/style.css"/>
+    <link rel="stylesheet" href="../style/conf-singles.css"/>
+</head>
+<body>
+<div class="root">
+    <div class="topbar">
+        <div class="topbar-menu">
+            <a href="javascript:toPage(0,1)" class="topbar-menu-item">
+                <img src="../image/menu01.png"/><span>连接</span>
+            </a>
+            <a href="javascript:toPage(1,2)" class="topbar-menu-item">
+                <img src="../image/menu02.png"/><span>数据</span>
+            </a>
+            <a href="javascript:toPage(1,3)" class="topbar-menu-item">
+                <img src="../image/menu03.png"/><span>信息</span>
+            </a>
+            <a href="javascript:toPage(1,4)" class="topbar-menu-item curr">
+                <img src="../image/menu04.png"/><span>配置</span>
+            </a>
+            <a href="javascript:toPage(1,5)" class="topbar-menu-item">
+                <img src="../image/menu05.png"/><span>监控</span>
+            </a>
+        </div>
+        <div class="topbar-logo"><img src="../image/app01.png"/></div>
+    </div>
+    <div class="handle">
+        <div class="handle-left">
+            <table id="tops-div" class="layui-table">
+                <colgroup>
+                    <col width="260">
+                    <col>
+                </colgroup>
+                <thead>
+                <tr>
+                    <th>配置项</th>
+                    <th>数据值</th>
+                </tr>
+                </thead>
+            </table>
+            <div id="data-div">
+                <table class="layui-table">
+                    <colgroup>
+                        <col width="260">
+                        <col>
+                    </colgroup>
+                    <tbody id="tbody"></tbody>
+                </table>
+            </div>
+        </div>
+        <div class="handle-right">
+            <div class="conf-tops-div">配置项修改</div>
+            <div class="data-form-div">
+                <form id="confForm" class="layui-form layui-form-pane">
+                    <div class="layui-form-div">
+                        <label class="layui-form-label">loglevel</label>
+                        <div class="layui-input-block">
+                            <select id="loglevel" name="loglevel" lay-verify="required">
+                                <option value="debug">debug</option>
+                                <option value="verbose">verbose</option>
+                                <option value="notice">notice</option>
+                                <option value="warning">warning</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="layui-form-div">
+                        <label class="layui-form-label">appendonly</label>
+                        <div class="layui-input-block">
+                            <select id="appendonly" name="appendonly">
+                                <option value="yes">yes</option>
+                                <option value="no">no</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="layui-form-div">
+                        <label class="layui-form-label">aof-rewrite-incremental-fsync</label>
+                        <div class="layui-input-block">
+                            <select id="aof-rewrite-incremental-fsync" name="aof-rewrite-incremental-fsync">
+                                <option value="yes">yes</option>
+                                <option value="no">no</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="layui-form-div">
+                        <label class="layui-form-label">repl-disable-tcp-nodelay</label>
+                        <div class="layui-input-block">
+                            <select id="repl-disable-tcp-nodelay" name="repl-disable-tcp-nodelay">
+                                <option value="yes">yes</option>
+                                <option value="no">no</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="layui-form-div">
+                        <label class="layui-form-label">activerehashing</label>
+                        <div class="layui-input-block">
+                            <select id="activerehashing" name="activerehashing">
+                                <option value="yes">yes</option>
+                                <option value="no">no</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="layui-form-div">
+                        <label class="layui-form-label">rdbchecksum</label>
+                        <div class="layui-input-block">
+                            <select id="rdbchecksum" name="rdbchecksum">
+                                <option value="yes">yes</option>
+                                <option value="no">no</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="layui-form-div">
+                        <label class="layui-form-label">rdbcompression</label>
+                        <div class="layui-input-block">
+                            <select id="rdbcompression" name="rdbcompression">
+                                <option value="yes">yes</option>
+                                <option value="no">no</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="layui-form-div" style="text-align: center">
+                        <button class="layui-btn set-color" lay-submit="" lay-filter="editBtn">提交修改</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+<script type="text/javascript" src="../plugin/layui/layui.js"></script>
+<script type="text/javascript" src="../script/nocopy.js"></script>
+<script type="text/javascript" src="../script/script.js"></script>
+<script type="text/javascript" src="../script/conf-singles.js"></script>
+</body>
+</html>
