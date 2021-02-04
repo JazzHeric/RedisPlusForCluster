@@ -2,7 +2,6 @@ package com.maxbill.base.consts;
 
 import com.google.common.collect.Sets;
 
-import java.util.Map;
 import java.util.Set;
 
 /**
