@@ -79,6 +79,7 @@ public class ConnectController {
      */
     public String deleteConnect(String id) {
         try {
+
             int delFlag = this.dataService.deleteConnectById(id);
             if (delFlag == 1) {
                 return getOkByJson("删除连接成功");
