@@ -17,6 +17,7 @@ import redis.clients.jedis.JedisCluster;
 import java.io.File;
 import java.util.Date;
 import java.util.List;
+import java.util.Objects;
 
 import static com.maxbill.base.bean.ResultInfo.*;
 import static com.maxbill.core.desktop.Desktop.setEndsViewImage;
@@ -103,6 +104,10 @@ public class ConnectController {
     public String createConnect(Boolean toData, String id) {
         try {
             Connect connect = this.dataService.selectConnectById(id);
+            //如果存在ssh session 则进行关闭
+            if (Objects.nonNull(JschUtil.session) || Objects.nonNull(JschUtil.jsch)) {
+                JschUtil.closeSSH();
+            }
             if ("1".equals(connect.getType())) {
                 JschUtil.openSSH(connect);
             }
@@ -273,9 +278,10 @@ public class ConnectController {
             if ("1".equals(connect.getType())) {
                 JschUtil.openSSH(connect);
                 port = 55555;
-                if (host.equals(connect.getShost())) {
+                host = "127.0.0.1";
+/*                if (host.equals(connect.getShost())) {
                     host = "127.0.0.1";
-                }
+                }*/
             }
             Jedis jedis = new Jedis(host, port, 3000);
             jedis.connect();

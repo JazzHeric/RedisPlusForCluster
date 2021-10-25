@@ -17,26 +17,31 @@ public class Connect {
     //是否集群：0单机，1集群
     private String isha;
 
-    //类型：0默认，1：ssh
-    private String type;
-
-    //连接名
-    private String sname;
-
-    //主机
+    //主机 -
     private String rhost;
-
-    //主机
-    private String shost;
 
     //redis端口
     private String rport;
 
-    //ssh端口
-    private String sport;
-
     //redis密码
     private String rpass;
+
+    //是否启用ssl
+    private String onssl;
+
+    /** ---------------SSH 相关参数-----------------*/
+
+    //类型：0默认，1：ssh  --是否开启SSH通道
+    private String type;
+
+    //主机  - SSH域名地址
+    private String shost;
+
+    //连接名 - SSH通道
+    private String sname;
+
+    //ssh端口 - SSH端口
+    private String sport;
 
     //ssh密码
     private String spass;
@@ -44,7 +49,5 @@ public class Connect {
     //ssh登录私钥
     private String spkey;
 
-    //是否启用ssl
-    private String onssl;
 
 }

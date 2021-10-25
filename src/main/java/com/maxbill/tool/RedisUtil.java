@@ -32,7 +32,7 @@ public class RedisUtil {
     private static final int MAX_WAIT = 3000;
 
     //超时时间
-    private static final int TIME_OUT = 3000;
+    private static final int TIME_OUT = 10000;
 
     //在borrow一个jedis实例时，是否提前进行validate操作；如果为true，则得到的jedis实例均是可用的；
     private static final boolean TEST_ON_BORROW = true;
@@ -62,9 +62,10 @@ public class RedisUtil {
         int port = Integer.valueOf(connect.getRport());
         if (connect.getType().equals("1")) {
             port = 55555;
-            if (host.equals(connect.getShost())) {
+            host = "127.0.0.1";
+/*            if (host.equals(connect.getShost())) {
                 host = "127.0.0.1";
-            }
+            }*/
         }
         if (StringUtils.isEmpty(connect.getRpass())) {
             jedisPool = new JedisPool(config, host, port, TIME_OUT);

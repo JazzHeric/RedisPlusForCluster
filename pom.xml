@@ -120,7 +120,7 @@
         <dependency>
             <groupId>redis.clients</groupId>
             <artifactId>jedis</artifactId>
-            <version>3.0.0</version>
+            <version>3.7.0</version>
         </dependency>
 
         <!--jsch依赖-->
@@ -142,6 +142,13 @@
             <groupId>com.google.guava</groupId>
             <artifactId>guava</artifactId>
             <version>13.0.1</version>
+        </dependency>
+
+        <!-- lettuce -->
+        <dependency>
+            <groupId>io.lettuce</groupId>
+            <artifactId>lettuce-core</artifactId>
+            <version>6.1.5.RELEASE</version>
         </dependency>
 
     </dependencies>
@@ -201,11 +208,11 @@
                         <installdirChooser>true</installdirChooser>
                     </bundleArguments>
                     <!--供应商-->
-                    <vendor>MaxBill</vendor>
+                    <vendor>HericJazz</vendor>
                     <!--允许所有权限-->
                     <allPermissions>true</allPermissions>
                     <!--版本信息-->
-                    <nativeReleaseVersion>v3.2.0</nativeReleaseVersion>
+                    <nativeReleaseVersion>v3.3.0_cluster</nativeReleaseVersion>
                     <!--说明信息-->
                     <description>
                         RedisPlus是为Redis可视化管理开发的一款开源免费的桌面客户端软件
