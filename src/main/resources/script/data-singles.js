@@ -320,6 +320,25 @@ function loadDbData(node, pattern) {
     }
 }
 
+//加载数据
+function loadAndDeleteDbData(node, pattern) {
+    layer.load(2);
+    var json = dataSinglesRouter.treeAndDeleteData(node.id, node.index, node.page, pattern);
+    var data = JSON.parse(json);
+    layer.closeAll('loading');
+    if (data.code === 200) {
+        var zTree = $.fn.zTree.getZTreeObj('keyTree' + node.index);
+        zTree.removeChildNodes(node);
+        zTree.addNodes(node, 0, data.data);
+        // zTree.expandAll(true);
+    } else {
+        layer.alert(data.msgs, {
+            skin: 'layui-layer-lan',
+            closeBtn: 0
+        });
+    }
+}
+
 
 //获取key信息
 function getKeysInfo(order) {
@@ -392,6 +411,34 @@ function loadLikeTree() {
             return node.level === 0
         }, true);
         loadDbData(currNode0, pattern);
+    } else {
+        layer.alert(data.msgs, {
+            skin: 'layui-layer-lan',
+            closeBtn: 0
+        });
+    }
+}
+
+
+//模糊匹配
+function loadLikeDeleteTree() {
+    if (null == currNode0) {
+        var zTreeObj = $.fn.zTree.getZTreeObj("keyTree0");
+        currNode0 = zTreeObj.getNodesByFilter(function (node) {
+            return node.level === 0
+        }, true);
+    }
+    layer.load(2);
+    var pattern = $("#key-like-delete-input").val();
+    var json = dataSinglesRouter.likeInit(currNode0.index, pattern);
+    var data = JSON.parse(json);
+    layer.closeAll('loading');
+    if (data.code === 200) {
+        var ztreeObj = $.fn.zTree.init($("#keyTree" + currNode0.index), zTreeSetting, data.data);
+        currNode0 = ztreeObj.getNodesByFilter(function (node) {
+            return node.level === 0
+        }, true);
+        loadAndDeleteDbData(currNode0, pattern);
     } else {
         layer.alert(data.msgs, {
             skin: 'layui-layer-lan',

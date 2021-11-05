@@ -435,7 +435,7 @@ public class RedisUtil {
     /**
      * 按条件获取分页数据
      */
-    public static List<ZTreeBean> getKeyTree(Jedis jedis, int index, int page, String pid, String pattern) {
+    public static List<ZTreeBean> getKeyTree(Jedis jedis, int index, int page, String pid, String pattern, boolean isDeleted) {
         long startTime = System.currentTimeMillis();
         /** CRC16 cluster模式 keys命令和select命令是禁止的*/
         if(!RedisUtil.isCluster(jedis)) {
@@ -445,6 +445,12 @@ public class RedisUtil {
             pattern = "*";
         }
         Set<String> keySet = RedisUtil.getRedisKeys(pattern, jedis);
+        if(isDeleted && !"*".equals(pattern)) {
+            Optional.ofNullable(keySet).orElse(Collections.emptySet()).stream().forEach(e -> {
+                System.out.println("删除key："+ e);
+                jedis.del(e);
+            });
+        }
         long endTime = System.currentTimeMillis();
         log.info("getKeyTree查询耗时：" + (endTime - startTime));
 

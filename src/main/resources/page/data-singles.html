@@ -41,9 +41,18 @@
             <div class="handle-left-main">
                 <div class="key-like">
                     <input id="key-like-input" class="query-like-input" onkeypress="keydownLoadTree()"
-                           type="text" placeholder="请输要检索的key表达式">
+                           type="text" placeholder="请输要检索的key表达式 *通配所有">
                     <button class="layui-btn layui-btn-sm query-like-button set-color" onclick="loadLikeTree()">
                         <i class="layui-icon">&#xe615;</i>搜索
+                    </button>
+                </div>
+            </div>
+            <div class="handle-left-main">
+                <div class="key-like">
+                    <input id="key-like-delete-input" class="query-like-input" onkeypress=""
+                           type="text" placeholder="请输要删除的key表达式 *已禁用">
+                    <button class="layui-btn layui-btn-sm query-like-button set-color" onclick="loadLikeDeleteTree()">
+                        <i class="layui-icon">&#xe615;</i>删除
                     </button>
                 </div>
             </div>

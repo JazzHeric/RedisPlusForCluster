@@ -105,7 +105,24 @@ public class DataSinglesController {
         try {
             Jedis jedis = getCurrentJedisObject();
             if (null != jedis) {
-                return getOkByJson(RedisUtil.getKeyTree(jedis, index, page, id, pattern));
+                return getOkByJson(RedisUtil.getKeyTree(jedis, index, page, id, pattern, false));
+            } else {
+                return disconnect();
+            }
+        } catch (Exception e) {
+            return exception(e);
+        }
+    }
+
+    /**
+     * 数据分页查询并且模糊删除
+     */
+    @SuppressWarnings("unused")
+    public String treeAndDeleteData(String id, int index, int page, String pattern) {
+        try {
+            Jedis jedis = getCurrentJedisObject();
+            if (null != jedis) {
+                return getOkByJson(RedisUtil.getKeyTree(jedis, index, page, id, pattern, true));
             } else {
                 return disconnect();
             }
