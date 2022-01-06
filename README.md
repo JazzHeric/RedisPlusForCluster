@@ -1,3 +1,6 @@
+#### 2022-01-06 更新
+1.修复set zset list hash元素value因<input>标签中双引号显示问题，导致元素value不展示bug。
+
 #### 2021-11-05 更新
 1.由于redis cluster批量删除功能无法使用，在搜索框下增加一个批量删除框功能，适用于redis cluster环境。
 

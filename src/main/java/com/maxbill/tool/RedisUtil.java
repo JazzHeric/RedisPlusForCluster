@@ -2,6 +2,8 @@ package com.maxbill.tool;
 
 import com.alibaba.fastjson.JSON;
 import com.google.common.collect.Lists;
+import com.google.common.collect.Maps;
+import com.google.common.collect.Sets;
 import com.maxbill.base.bean.*;
 import com.maxbill.base.consts.Constant;
 import com.maxbill.base.service.ClusterService;
@@ -956,12 +958,14 @@ public class RedisUtil {
             case "set":
                 Set<String> set = jedis.smembers(key);
                 StringBuilder setBuf = new StringBuilder();
+                Set<String> inputSet = Sets.newHashSet();
                 for (String info : set) {
                     setBuf.append(info).append(",");
+                    inputSet.add(info.replaceAll("\"","&quot;"));
                 }
                 String textSet = setBuf.toString();
                 keyBean.setText(textSet.substring(0, textSet.length() - 1));
-                keyBean.setJson(JSON.toJSONString(set));
+                keyBean.setJson(JSON.toJSONString(inputSet));
                 keyBean.setRaws(keyBean.getText().replace(",", "\r\n"));
                 break;
             //list (列表)
@@ -971,12 +975,14 @@ public class RedisUtil {
                     Collections.reverse(list);
                 }
                 StringBuilder listBuf = new StringBuilder();
+                List<String> inputList = Lists.newArrayList();
                 for (String info : list) {
                     listBuf.append(info).append(",");
+                    inputList.add(info.replaceAll("\"","&quot;"));
                 }
                 String textList = listBuf.toString();
                 keyBean.setText(textList.substring(0, textList.length() - 1));
-                keyBean.setJson(JSON.toJSONString(list));
+                keyBean.setJson(JSON.toJSONString(inputList));
                 keyBean.setRaws(keyBean.getText().replace(",", "\r\n"));
                 break;
             //zset (有序集)
@@ -987,24 +993,31 @@ public class RedisUtil {
                     Collections.reverse(zsetList);
                 }
                 StringBuilder zsetBuf = new StringBuilder();
+                List<Tuple> zsetInputList = Lists.newArrayList();
                 for (Tuple info : zsetList) {
                     zsetBuf.append(info.getElement()).append(",");
+                    String inpuElement = info.getElement().replaceAll("\"","&quot;");
+                    Tuple inputTuple = new Tuple(inpuElement, info.getScore());
+                    zsetInputList.add(inputTuple);
                 }
                 String textZset = zsetBuf.toString();
                 keyBean.setText(textZset.substring(0, textZset.length() - 1));
-                keyBean.setJson(JSON.toJSONString(zsetList));
+                keyBean.setJson(JSON.toJSONString(zsetInputList));
                 keyBean.setRaws(keyBean.getText().replace(",", "\r\n"));
                 break;
             //hash (哈希表)
             case "hash":
                 Map<String, String> map = jedis.hgetAll(key);
                 StringBuilder mapBuf = new StringBuilder();
-                for (Map.Entry entry : map.entrySet()) {
+
+                Map<String, String> inputMap = Maps.newHashMap();
+                for (Map.Entry<String, String> entry : map.entrySet()) {
                     mapBuf.append(entry.getKey()).append(":").append(entry.getValue()).append(",");
+                    inputMap.put(entry.getKey(), entry.getValue().replaceAll("\"","&quot;"));
                 }
                 String textMap = mapBuf.toString();
                 keyBean.setText(textMap.substring(0, textMap.length() - 1));
-                keyBean.setJson(JSON.toJSONString(map));
+                keyBean.setJson(JSON.toJSONString(inputMap));
                 keyBean.setRaws(keyBean.getText().replace(",", "\r\n"));
                 break;
             //string (字符串)
